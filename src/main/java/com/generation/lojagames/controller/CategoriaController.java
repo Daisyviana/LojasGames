@@ -60,6 +60,7 @@ public class CategoriaController {
 			.map(resposta -> ResponseEntity.status(HttpStatus.OK).body(categoriaRepository.save(categoria)))
 			.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
 	}
+	
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable Long id) {
